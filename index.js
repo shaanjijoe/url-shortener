@@ -12,11 +12,11 @@ app.get('/api/shorten-url', (req, res) => {
     
     if (Object.values(mapping).includes(url)) {
         const id = Object.keys(mapping).find(key => mapping[key] === url);
-        res.json({ shortUrl: `http://localhost:3000/expand-url?id=${id}` });
+        res.json({ shortUrl: `https://url-shortener-a5kh.onrender.com/expand-url?id=${id}` });
         return;
     } else {
         mapping[count] = url;
-        res.json({ shortUrl: `http://localhost:3000/expand-url?id=${count}` });
+        res.json({ shortUrl: `https://url-shortener-a5kh.onrender.com/expand-url?id=${count}` });
         count++;
         // console.log(mapping);
     }
